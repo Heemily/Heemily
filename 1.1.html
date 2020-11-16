@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下，你就知道</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+         }
+        header{
+            width: 95.5%;
+            height: 60px ;
+            margin:0 0 0 24px;
+            background-color: white;
+            }
+            main{
+                height: 720px;
+               
+            }
+        .a1{
+            list-style: none;
+            float: left;
+            margin: 19px 31px 0 0;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            color: #222222;
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        .a1:hover{
+            color: rgb(49, 94, 251);
+        }
+        .b:hover{
+            color: rgb(49, 94, 251);
+        }
+        .footer{
+               width: 100%;
+               height:40px;
+               margin-bottom: 0px;
+               position: fixed;
+               background-color:  #fbfbfb;; 
+            }
+        .z{
+            color: #9195a3;
+            font-size: 12px;
+            margin: 0 -10px 0 24px;
+            line-height: 40px;
+            position: relative;
+            text-decoration: none;
+        }
+        .x{
+            list-style: none;
+            color: #9195A3;
+            font-size: 12px; 
+            /* line-height: 44px; */
+            /* margin :0px 15px  0 24px; */
+            margin:  0 -10px 0 24px;
+            /* position: relative;   */
+            text-decoration: none;
+            }
+        .A{
+            color: #BBBBBB;
+            font-size: 12px;
+            line-height: 40px;
+            margin:  -3px 462px 0 0;
+            float: right;
+            text-decoration: none;
+           
+        }
+        .B{
+            color:  #BBBBBB;
+            font-size: 12px;
+            line-height: 40px;
+            margin: -3px -220px 0 0;
+            float: right;
+            text-decoration: none;
+            
+        }
+        .C{
+            color:  #BBBBBB;
+            font-size: 12px;
+            line-height: 40px;
+            margin: -3px -405px 0 0;
+            float: right;
+            text-decoration: none;
+            
+        }
+        .C:hover{
+            color: #000;
+        }
+        .D{
+            color: #BBBBBB;
+            font-size: 12px;
+            line-height: 40px;
+            margin-right: -516px;
+            margin-top: -3px; 
+            float: right;
+            text-decoration: none;
+        
+        }
+        .x:hover{
+            color: #000;
+        }
+        .z:hover{
+            color: #000;
+        }
+        .j:hover{
+            color: #000;
+        }
+        nav{
+            position: relative;
+            width: 100%;
+            height: 208px;
+            margin:0 0 0 0;
+            
+        }
+        img{
+            width: 305px;
+            height: 145px;
+            position: relative;
+            margin-left: 575px;
+            margin-top: -50px;
+           }
+        .c{
+            list-style: none;
+            position: absolute;
+            right: 24px;
+            color: #fff;
+            font-size: 13px;
+            text-align: center;   
+            line-height: 14px;
+           }
+       .b{
+            list-style:none;
+            position: relative;
+            float:right;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            color: #222222;
+            margin: 20px 65px 0 200px;
+            text-decoration: none;
+        }
+        .c:link {
+            width: 40px;
+            height: 15px;
+            font-size: 13px ;
+            text-decoration: none;
+            padding: 4px;
+            margin: 18px 0 0 32px;
+            background-color: #4e71f2;
+            border-radius: 5px 5px 5px 5px;
+            
+        }
+        img{
+            width: 270px;
+            height: 128px;
+            position: relative;
+            margin-left: 585px;
+            margin-top: -6px;
+            text-align: center;
+            }
+        .e{
+            width: 545px;
+            height: 40px;
+            position: relative;
+            margin-left: 385px;
+            margin-top: 2px;
+            text-align: center;
+            border: 2px solid #c4c7ce;
+            background: #fff;
+            border-radius: 10px 0 0 10px; 
+            outline: 0;
+        }
+        .e:hover{
+            color: #a7aab5;
+        }
+        .f{
+            width: 108px;
+            height: 46px;
+            border: #4e6ef2;
+            border-radius: 0 10px 10px 0;
+            background-color: #4e6ef2;
+            color: #fff;
+            font-weight: 400;
+            margin: 16px 0 0 -5px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            position: relative;
+            top: 1px;
+            left: -1px;
+        }
+        article {
+            width: 100%;
+            height: 270px;
+            position: relative;
+            text-align: center;
+        }
+        .zz{
+            list-style: none;
+            float: left;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #222222;
+            text-decoration: none;
+            margin-left: 386px;
+        }
+        /* .footer{
+            position: fixed;
+            bottom: -40px;
+            background-color: red;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a class="a1" href="http://news.baidu.com/">新闻</a></li>
+            <li><a class="a1" href="https://www.hao123.com/">hao123</a></li>
+            <li><a class="a1" href="https://map.baidu.com/">地图</a></li>
+            <li><a class="a1" href="https://haokan.baidu.com/">视频</a></li>
+            <li><a class="a1" href="http://tieba.baidu.com">贴吧</a></li>
+            <li><a class="a1" href="https://xueshu.baidu.com/" >学术</a></li>
+            <li><a class="a1" href="http://www.baidu.com/more/" >更多</a></li>
+            <li><a class="c" href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F&amp;sms=5">登录</a></li>
+            <li><a class="b" href="">设置</a></li>
+        </ul>
+    </header>
+    <main>
+         <section>
+            <nav>
+                <img src="PC.png" alt="">
+                <p></p>
+                <input type="text" name="username" value="" class="e">
+                <input type="button" value="百度一下" class="f">
+                </nav>
+                <article>
+                    <a class="zz" href="http://top.baidu.com/?fr=mhd_card">百度热榜</a>
+                </article>
+                <!-- <aside></aside> -->
+         </section>
+    </main>
+
+    <div class="footer">
+            <a class="z" href="https://www.baidu.com/cache/setindex/index.html">设为首页</a>
+            <a class="x" href="https://home.baidu.com/">关于百度</a>
+            <a class="x" href="https://ir.baidu.com/" > About Baidu</a>
+            <a class="x" href="https://isite.baidu.com/site/e.baidu.com/d38e8023-2131-4904-adf7-a8d1108f51ef?refer=888" >百度营销</a>
+            <a class="x" href="https://www.baidu.com/duty/">使用百度前必读</a>
+            <a class="x" href="https://passport.baidu.com/v2/?login&tpl=service_feedback&u=http%3A%2F%2Fhelp.baidu.com%2Fnewadd%3Fprod_id%3D1%26category%3D4" >意见反馈</a>
+            <a class="x" href="https://help.baidu.com/" >帮助中心</a>
+            <a class="A" href="">©2020 Baidu</a>
+            <a class="B" href="">(京)-经营性-2017-0020</a>
+            <a class="C" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">京公网安备11000002000001号</a>
+            <a class="D" href="">京ICP证030173号</a>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 最新的：主要是当缩小时，下面的footer不出现 -->
