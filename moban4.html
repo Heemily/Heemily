@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        #box {                                                  
+    
+            width: 600px;
+            height: 800px;
+            margin: 210px auto;
+            left: -404px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        #box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            width: 4000px;
+        }
+
+        #box ul li {
+            overflow: hidden;
+            float: left;
+        }
+
+        #box ol {
+            list-style: none;
+            position: absolute;
+            bottom: 0px;
+            left: 400px;
+        }
+
+        #box ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #ccc; 
+            margin-right:10px;
+        }
+
+        #left, #right {
+            width: 50px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 30px;
+            line-height: 80px;
+            text-align: center;
+            display: none;
+            position: absolute;
+            top: 380px;
+        }
+
+        #left {
+            left: 0;
+        }
+
+        #right {
+            right: 0;
+        }
+        header{
+            width:100%;
+            height: 60px;
+            background-color: pink;
+            margin-top: -1220px;
+            list-style: none;
+        }
+        .a{
+            list-style: none;
+            width: 100%;
+            height: 128px;
+            margin-left: -58px;
+            margin-top:12px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            font-size: 23px;
+            color: #222222;
+
+        }
+        nav{
+            width:100%;
+            height: 150px;
+            background-color:pink;
+            margin-top: 0px;
+            list-style: none;
+        }
+        .b{
+            list-style: none;
+            margin-left: 350px;
+            margin-top:-25px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            font-size: 40px;
+        }
+        .c{
+            list-style: none;
+            margin-left: 80px;
+            margin-top:-25px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+            font-size: 40px;
+        }
+        .c:hover{
+            color: red;
+        }    
+        .b,.c{
+            background-color: pink;
+            color:#fefefe;
+            text-shadow:
+                    0px 1px 0px #c0c0c0,
+                    0px 2px 0px #b0b0b0,
+                    0px 3px 0px #a0a0a0,
+                    0px 4px 0px #909090,
+                    0px 5px 10px rgba(0, 0, 0, 0.6);
+        }
+        article{
+            width:807px;
+            height: 800px;
+            background-color: skyblue;
+            margin-top: 0px;
+            list-style: none;
+            margin-left: 600px;
+        }
+        .d{
+            list-style: none;
+            width: 600px;      /* 可能要调 */
+            height: 800px;      /* 可能要调 */
+            float: left;
+            margin-top: 100px;
+            margin-left: 100px;
+            font-size: 20px;      /* 可能要调 */
+            text-decoration: none;
+        }
+        .e{
+            list-style: none;
+            width: 600px;      /* 可能要调 */
+            height: 800px;      /* 可能要调 */
+            float: left;
+            margin-top: -800px;
+            margin-left: 110px;
+            font-size: 20px;      /* 可能要调 */
+            text-decoration: none;
+        }
+        aside{
+            width:100%;
+            height: 300px;
+            background-color: rgba(204, 100, 230, 0.836);
+            margin-top: 0px;
+            list-style: none;
+            margin-left: 0;
+        }
+        section{
+            width:100%;
+            height: 300px;
+            background-color: burlywood;
+            margin-top: 0px;
+            list-style: none;
+            margin-left: 0;
+        }
+        .e{
+            width:150px;
+            height: 300px;
+            background-color: blue;
+            margin-left: -1300px;
+            margin-top: 0px;
+        }
+        .f{
+            list-style: none;
+            width:150px;
+            height: 150px;
+            font-size: 20px;      /* 可能要调 */
+            margin-left: 50px;
+            margin-top: -70px;
+            float: left;
+            text-decoration: none;
+
+        }
+        .f {
+            color:white;
+            transform-origin:center bottom;
+            transform-style:preserve-3d;
+            transition:all 1s;
+            cursor: pointer;
+        }
+        .f:hover {
+            transform:rotate3d(1, 0, 0, 40deg);
+        }
+        .f h1 {
+            position: absolute;
+            left:0;
+            right:0;
+            margin:auto;
+            text-shadow:0 0 10px rgba(0, 0, 100, .5);
+        }
+        /*
+        sass 循环给每一个h1设置不同的translateZ
+        */
+        @font-feature-values $n from 1 to 8 {
+            .effect08 h1:nth-child(#{$n}) {
+                transform:translateZ(4px*$n);
+            }
+        }
+        .h{
+            list-style: none;
+            width:800px;   /*调一哈*/
+            height: 300px; 
+            float: left;
+            margin-top: -20px;
+            margin-left: 0;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+        .g{
+            
+            width:150px;
+            height: 300px;
+            background-color: blue;
+            margin-left: 1258px;
+            margin-top: 0px;
+        
+        }
+        .i{
+            list-style: none;
+            width:150px;
+            height: 150px;
+            font-size: 40px;      /* 可能要调 */
+            margin-left: 1300px;
+            margin-top: -275px;
+            float: left;
+            text-decoration: none;
+        }
+        .i {
+            color:white;
+            transform-origin:center bottom;
+            transform-style:preserve-3d;
+            transition:all 1s;
+            cursor: pointer;
+        }
+        .i:hover {
+            transform:rotate3d(1, 0, 0, 40deg);
+        }
+        .i h1 {
+            position: absolute;
+            left:0;
+            right:0;
+            margin:auto;
+            text-shadow:0 0 10px rgba(0, 0, 100, .5);
+        }
+        /*
+        sass 循环给每一个h1设置不同的translateZ
+        */
+        @font-feature-values $n from 1 to 8 {
+            .effect08 h1:nth-child(#{$n}) {
+                transform:translateZ(4px*$n);
+            }
+        }
+        .j{
+            
+            list-style: none;
+            width:800px;   /*调一哈*/
+            height: 300px; 
+            float: left;
+            margin-top: -240px;
+            margin-left: 150px;
+            font-size: 20px;
+            text-decoration: none;
+
+        
+        }
+        footer{
+            width: 100%;
+            height: 300px;
+            background-color: white;
+        }
+        span{
+            list-style: none;
+            height: 300px;
+            width: 100%;
+            float: left;
+            font-size: 80px;
+            margin-top: 50;
+            margin-left: 250px;
+            text-decoration: none;
+
+
+        }
+        span{
+            background:  linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            color: transparent;
+
+        }
+        #toTop {
+            width: 150px;
+            height: 150px;
+            background: #ccc;
+            color: #0099ff;
+            font-size: 28px;
+            text-align: center;
+            line-height: 150px;
+            position: fixed;
+            right: 5px;
+            bottom: 5px;
+            cursor: pointer;
+            display: none;
+            
+        }
+        .z{
+            list-style: none;
+            width: 100%;
+            height: 300px;
+            background-color: plum;
+            margin-top: 0;
+            margin-left: 0;
+            text-decoration: none;
+        }
+        .x{
+            width:150px;
+            height: 300px;
+            margin-left: 0px;
+            margin-top: -300px;
+            background-color: blue;
+            list-style: none;
+        
+        }
+        
+        .y{
+            list-style: none;
+            width:150px;
+            height: 300px;
+            font-size: 15px;      /* 可能要调 */
+            margin-left: 50px;
+            margin-top: -280px;
+            float: left;
+            text-decoration: none;
+        }
+        .y {
+            color:white;
+            transform-origin:center bottom;
+            transform-style:preserve-3d;
+            transition:all 1s;
+            cursor: pointer;
+        }
+        .y:hover {
+            transform:rotate3d(1, 0, 0, 40deg);
+        }
+        .y h1 {
+            position: absolute;
+            left:0;
+            right:0;
+            margin:auto;
+            text-shadow:0 0 10px rgba(0, 0, 100, .5);
+        }
+
+        .zz{
+            list-style: none;
+            width: 600px;
+            height: 150px;
+            float: left;
+            margin-top: -250px;
+            margin-left: 100px;
+            font-size: 25px;
+            text-decoration: none;
+
+        }
+        .ww{
+            list-style: none;
+            color: black;
+            text-decoration: none;
+        }
+        .ww:hover{
+            color: rgb(49, 94, 251);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="all">
+        <div class="screen">
+            <ul>
+                <li><img src="newnew1.jpg" width="600px" height="800px" alt=""></li>
+                <li><img src="newnew2.jpg" width="600px" height="800px" alt=""></li>
+                <li><img src="newnew3.jpg" width="600px" height="800px" alt=""></li>
+                <li><img src="newnew4.jpg" width="600px" height="800px" alt=""></li>
+                <li><img src="newnew5.jpg" width="600px" height="800px" alt=""></li>
+            </ul>
+            <ol></ol>
+        </div>
+        <div>
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+        </div>
+    </div>
+    <header>
+        <li><a class="a" href="">201916180305   邹湘宇     前一个人：王诗人 201916180304   后一个人：阳菲  201916180306 <p></p>
+        我来自湖南娄底，个子不高，最喜欢吃东西，喜欢乒乓球 </a></li>
+    </div>
+    </header>
+    <main>
+        
+           <nav>
+                <li>
+                    <a class="b" href="">我最喜欢的美食是：<p></p> </a>
+                </li>
+                    <a class="c" href="https://m.tb.cn/h.4ViL8uj?sm=2355ed ">小麻花</a> </a>
+                </li>
+            </nav>
+            <article>
+                <li class="d">
+                   
+                    <a href="https://m.tb.cn/h.4ViL8uj?sm=2355ed ">
+                        麻花</a>是中国的一种特色 健康食品。天津以生产大麻花出名，山西稷山麻花以油酥出名，苏杭藕粉以原始工艺出名，湖北崇阳以小麻花出名，
+                        而湖南新化赵氏麻花独具一格。湖南新化麻花引入典故“赵氏麻花来由”：相传上古时期，蚩尤带领九黎氏族部落在湖南新化县维山乡神龙山一带兴耕农作，
+                        繁育后代，自然成了南都门。神龙山脚下（今名维山乡水口村）有一口水井，水井旁曾经住有一户赵氏农家，常年靠做麻花烧饼为生计。
+                        有一次蚩尤的部下巡山迷路了就转到了这户人家，饥饿的蚩尤部下抢了这家麻花烧饼，烧了这家茅房。准备开杀时一位蚩尤部下说道:“此人为我们有用，
+                        把他带上山去吧”。蚩尤尝了麻花烧饼喜出望外，大声连说了几个“好”字，令赵氏在山上做了几锅麻花烧饼叫族人分享，族人都说好吃，唯独一个小孩说到不好吃，
+                         蚩尤冲着赵氏怒道：“这是为何？” 赵氏跪曰：“这与水质有关矣！”蚩尤派部下跟赵氏下山在那口水井坊再做几锅麻花烧饼，蚩尤吃了果然不一样，
+                         蚩尤的军师笑道：“麻花烧饼说都门，名色繁伪恣饱吞！”蚩尤听后高兴地称它为“水口坊麻花烧饼”，从此水口坊麻花、赵氏麻花相传至今。
+                </a>
+                </li>
+            </article>
+            <aside>
+                <li class="e">
+                    <li class="f">
+                            <h1>主 <p></p> 要 <p></p> 产 <p></p> 地 <p></p> </h1>
+                            </li>
+                    <li class="h">
+                        湖南新化麻花，<a  class="ww" href="https://baike.sogou.com/v248703.htm;jsessionid=E545D9DC48CCA3F4AB51E654362A2159 ">
+                            天津麻花</a>，山西稷山麻花，陕西咸阳麻花，湖北 崇阳麻花，江浙苏杭麻花等。
+                        天津以生产大麻花出名，陕西咸阳以咬金大麻花出名，苏杭以手工藕粉麻花出名，而山西稷山麻花是咸的，一尺左右长（有大小几种），
+                        有普通的和油酥的，每根都多次扭转抻拉折叠而成，色香味诱人，做主食和零食都可。
+                        麻花因其制作简单，食用方便，被历来的文人墨客大加赞誉。宋代的大文豪 苏东坡就曾定有一首赞美麻花的诗，
+                       《寒具诗》：“纤手搓成玉数寻，碧油煎出嫩黄深，夜来春睡无轻重，压扁佳人缠臂金。”
+                    </li> 
+                </li>
+            </aside>
+            <section>
+               <li class="g">
+                    <li class="i">
+                        <h1>做 <p></p> 法  </h1>
+                         </li>
+            <li class="j">
+                面粉、花生油、盐、水、将面粉放盆中倒入油400g面粉放40g油、5g盐、用手将面粉和油搓均、（油多则后面难操作）、
+                搓透后加水揉成面团（面团不可太硬）盖湿布饧20分钟。 　　将饧好的面团拿出再次揉均、搓成长条切出小剂子、盖湿布再饧10分钟。
+                 　饧好后均匀的搓成细长条、两头向不同方向搓上劲、合并两头捏紧。 　　再重复一次、做成麻花生坯。 　　
+                 依次做好所有的小剂子、成麻花生坯。 　　锅内放多油烧至2成热时下入麻花生坯（2成热的油温变化不大用手置于油锅上面微微感觉有点热）。
+            </li> 
+        
+    
+            </section>
+            <footer>
+                <li class="z">
+                    <li class="x">
+                        <li class="y">
+                            <h1>麻 <p></p> 花 <p></p> 文 <p></p> 化 
+                        </li>
+                    <li class="zz">
+                        几千年的中华美食文化中，小麻花是炎黄子孙喜爱的民族传统食品。苗翠花小麻花是麻花中的一枝奇葩，
+                        既秉承了麻花传统的技法，又将现代科技注入到麻花制作中，使这种中华民族的传统食品再次焕发了青春。
+                    </li>
+                         </li>  
+                </li>
+                
+                
+                
+                <span>
+                    欢迎阅览！
+                </span>
+                <div id="toTop">返回顶部</div>
+            </footer>
+   </main>
+
+    <script>
+        
+        var interval = 3000;
+
+        var box = document.getElementById('box');
+        var screen = box.children[0];
+        var ul = screen.children[0];
+        var ol = screen.children[1];
+
+        var arrLeft = document.getElementById('left');
+        var arrRight = document.getElementById('right');
+
+       
+        var imgWidth = box.offsetWidth;
+
+        function setInnerText(element, content) {
+            if (typeof element.innerText === 'string')
+                element.innerText = content;
+            else
+                element.textContent = content;
+        }
+
+        function animate(element, target, callback) {
+            if (element.timerId)
+                clearInterval(element.timerId);
+            element.timerId = setInterval(function () {
+                // 当前坐标
+                var current = element.offsetLeft;
+                var step = 10;
+                if (current > target)
+                    step = - Math.abs(step);
+                if (Math.abs(current - target) <= Math.abs(step)) {
+                    element.style.left = target + 'px';
+                    clearInterval(element.timerId);
+                    if (callback)
+                        callback();
+                    return;
+                }
+                current += step;
+                element.style.left = current + 'px';
+            }, 20);
+        }
+        var count = ul.children.length;
+        for (var i = 0; i < count; ++i) {
+            var li = document.createElement('li');
+            setInnerText(li, i + 1);
+            ol.appendChild(li);
+            li.index = i;
+            li.onclick = liClick;
+        }
+        ol.children[0].style.backgroundColor = 'dodgerblue';
+        box.onmouseenter = function () {
+            arrLeft.style.display = 'block';
+            arrRight.style.display = 'block';
+            clearInterval(timerId);
+        }
+        box.onmouseleave = function () {
+            arrLeft.style.display = "none";
+            arrRight.style.display = "none";
+            timerId = setInterval(function () {
+                arrRight.click();
+            }, interval);
+        }
+        function liClick() {
+            animate(ul, -this.index * imgWidth);
+            for (i = 0; i < count; ++i)
+                ol.children[i].style.backgroundColor = '';
+            this.style.backgroundColor = 'dodgerblue';
+            index = this.index;
+        }
+        var cloneLi = ul.children[0].cloneNode(true);
+        ul.appendChild(cloneLi);
+        var index = 0;
+        arrRight.onclick = function () {
+            if (index === count) {
+                index = 0;
+                ul.style.left = '0px';
+            }
+
+            ++index;
+            if (index < count) {
+                ol.children[index].click();
+            } else {
+                animate(ul, -index * imgWidth);
+                for (i = 0; i < count; ++i)
+                    ol.children[i].style.backgroundColor = '';
+                ol.children[0].style.backgroundColor = 'dodgerblue';
+            }
+        }
+
+        arrLeft.onclick = function () {
+            if (index === 0) {
+                index = count;
+                ul.style.left = -index * imgWidth + 'px';
+            }
+            --index;
+                ol.children[index].click();
+        }
+        var timerId = setInterval(function () {
+            arrRight.click();
+        }, interval);
+
+        var toTop = document.getElementById("toTop");
+    toTop.onclick = function () {
+        document.documentElement.scrollTop = 0;
+    };
+
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop >= 500)
+            toTop.style.display = "block";
+        else
+            toTop.style.display = "none";
+    };
+    </script>
+    
+</body>
+</html>
